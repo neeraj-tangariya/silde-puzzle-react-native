@@ -9,7 +9,7 @@ type BoardProps = {
 }
 
 const Board = ({ imgUrl }: BoardProps) => {
-    const [tiles, setTiles] = useState<any>([...Array(TILE_COUNT).keys()]);
+    const [tiles, setTiles] = useState<Array<number>>([...Array(TILE_COUNT).keys()]);
 
     const [isStarted, setIsStarted] = useState<boolean>(false);
 
@@ -18,7 +18,7 @@ const Board = ({ imgUrl }: BoardProps) => {
     console.log("is started:", isStarted);
 
     const shuffleTiles = () => {
-        const shuffledTiles = shuffle(tiles);
+        const shuffledTiles: any[] = shuffle(tiles);
         setTiles(shuffledTiles);
     };
 

@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Pressable } from 'react-native'
 import React from 'react'
 import { getMatrixPosition, getVisualPosition } from '../../utils/slide-puzzle'
 import { BOARD_SIZE, GRID_SIZE, TILE_COUNT } from '../../utils/constants'
+import { Animated } from 'react-native'
 
 type TileProps = {
   tile: number,
